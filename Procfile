@@ -1,0 +1,1 @@
+worker: java -jar target/bot-telegram-sixth-1.0-SNAPSHOT-jar-with-dependencies.jar

@@ -1,0 +1,8 @@
+heroku login
+heroku scale web=0 worker=1 -a bot-telegram-sixth 
+oppure
+heroku scale worker=1 -a bot-telegram-sixth 
+
+--stop process
+heroku ps:stop worker -a bot-telegram-sixth
+heroku ps:start worker -a bot-telegram-sixth
