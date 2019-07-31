@@ -92,7 +92,21 @@ public class MyBots extends TelegramLongPollingBot{
 		for(int i = 1; i < currencies.length; i++){
 			sb.append(currencies[i] + " ");
 		}
-		sb.append(" è una merdaccia!");
+
+		List<String> insultiList = new ArrayList<String>();
+		insultiList.add("è una merdaccia");
+		insultiList.add("si pulisce il culo con la faccia di MB");
+		insultiList.add("ha la madre più porca di quella di Matilde");
+		insultiList.add("si guarda i porno delle giraffe");
+		insultiList.add("si sbatte Lucy almeno 3 volte al giorno");
+		insultiList.add("si guarda i porno gay");
+		insultiList.add("non sta mai zitta!");
+
+
+		int randomNr = 0 + (int)(Math.random() * (((insultiList.size()-1) - 0) + 1));
+
+		sb.append(insultiList.get(randomNr));
+
 		String text = sb.toString();
 		SendMessage message = new SendMessage(); // Inizializziamo un'altra variabile per l'invio del messaggio
 		Long sender_id = senderId; // Assegniamo ad una variabile l'Id della chat
